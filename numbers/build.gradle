@@ -1,11 +1,10 @@
 plugins {
-    id 'java'
+    id 'groovy'
 }
 
 group 'com.aor.numbers'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -14,6 +13,8 @@ repositories {
 dependencies {
   implementation 'org.testng:testng:7.1.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.18'
     testImplementation 'org.mockito:mockito-core:3.7.7'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
