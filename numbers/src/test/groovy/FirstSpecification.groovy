@@ -62,4 +62,12 @@ class FirstSpecification extends Specification{
         def deduplicator = Mock(GenericListDeduplicator)
         deduplicator.deduplicate(_) >>> [Arrays.asList(1, 2, 4), Arrays.asList(6, 7)]
     }
+    def "Should verify notify was called"() {
+        given:
+        def notifier = Mock(Notifier)
+        when:
+        notifier.notify('foo')
+        then:
+        1 * notifier.notify('foo')
+    }
 }
